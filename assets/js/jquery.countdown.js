@@ -157,12 +157,8 @@
             this.offset = {
                 seconds: this.totalSecsLeft % 60,
                 minutes: Math.floor(this.totalSecsLeft / 60) % 60,
-                hours: Math.floor(this.totalSecsLeft / 60 / 60) % 24,
-                days: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7,
-                totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24),
-                weeks: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7),
-                months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30),
-                years: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 365)
+                hours: Math.floor(this.totalSecsLeft / 3600) % 24,
+                days: Math.floor(this.totalSecsLeft / 86400), // Calculate days only
             };
             if (this.totalSecsLeft === 0) {
                 this.stop();
