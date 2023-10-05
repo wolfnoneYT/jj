@@ -47,14 +47,14 @@
         }
     }
     var DIRECTIVE_KEY_MAP = {
-        Y: "years",
-        m: "months",
-        w: "weeks",
-        d: "days",
-        D: "totalDays",
-        H: "hours",
-        M: "minutes",
-        S: "seconds"
+       var DIRECTIVE_KEY_MAP = {
+    d: "days",
+    H: "hours",
+    M: "minutes",
+    S: "seconds"
+};
+
+
     };
     function strftime(offsetObject) {
         return function(format) {
