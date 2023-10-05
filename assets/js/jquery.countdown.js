@@ -158,7 +158,8 @@
                 seconds: this.totalSecsLeft % 60,
                 minutes: Math.floor(this.totalSecsLeft / 60) % 60,
                 hours: Math.floor(this.totalSecsLeft / 3600) % 24,
-                days: Math.floor(this.totalSecsLeft / 86400), // Calculate days only
+                days: Math.floor(this.totalSecsLeft / 60 / 60 / 24), // Updated to correctly calculate days
+
             };
             if (this.totalSecsLeft === 0) {
                 this.stop();
