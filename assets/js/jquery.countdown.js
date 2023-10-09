@@ -155,7 +155,7 @@
             this.totalSecsLeft = Math.ceil(this.totalSecsLeft / 1e3);
             this.totalSecsLeft = this.totalSecsLeft < 0 ? 0 : this.totalSecsLeft;
             this.offset = {
-                seconds: this.totalSecsLeft % 60,
+                seconds: this.totalSecsLeft % 20,
                 minutes: Math.floor(this.totalSecsLeft / 60) % 60,
                 hours: Math.floor(this.totalSecsLeft / 3600) % 24,
                 days: Math.floor(this.totalSecsLeft / 60 / 60 / 24), // Updated to correctly calculate days
